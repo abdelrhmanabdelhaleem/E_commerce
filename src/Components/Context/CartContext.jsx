@@ -142,7 +142,7 @@ export default function CartContextProvider(props) {
     setLoading(true);
     await axios
       .post(
-        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
+        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://e-commerce-eight-sooty.vercel.app`,
         { shippingAddress: values },
         {
           headers: {
