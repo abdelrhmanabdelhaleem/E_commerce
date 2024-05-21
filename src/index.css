@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+
+body {
+  font-family: var(--font-family) !important;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.product:hover {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+  cursor: pointer;
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-lg {
+  font-size: 20px;
+}
+.text-main {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+
+.loaderContainer {
+  /* height: calc(100vh - 100px); */
+  height: calc(100vh - 130px) !important;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(145, 158, 171, 0.12); */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  border-color: #ff3d00 transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cart {
+  border: 2px solid #0aad0a;
+  border-radius: 5px;
+}
